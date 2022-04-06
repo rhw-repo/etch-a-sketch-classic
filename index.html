@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Qwigley&family=Special+Elite&display=swap');
+  </style>
+  <title>Etch A Sketch</title>
+</head>
+
+<body>
+
+  <div class="flex-container">
+
+    <div class="title">
+      <h1>Etch A Sketch</h1>
+
+      <div class="content">
+        <div class="board"></div>
+        <div class="buttons">
+          <button class="btn" onclick="changeColour('black')">Black</button>
+          <button class="btn" onclick="changeColour('#f4c2c2')">Pink</button>
+          <button class="btn" onclick="changeColour('hsl(180, 100%, 72%)')">Blue</button>
+          <button class="btn" onclick="changeColour('random')">Random</button>
+          <button class="btn" onclick="changeColour('#d9d9d9')">Erase</button>
+          <button class="btn" onclick="reset()">Reset</button>
+        </div>
+        <div class="instructions">
+          <h3>Click on a colour button. Click on the sketchpad to start or stop drawing. Mouseover the pad to draw or
+            erase. </h3>
+        </div>
+      </div>
+      <div>
+        <p><label>Resize the pad = type a number between 2 and 100. Press Enter.
+            <input type="text" value="16" onchange="setSize(this.value)" /></label></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>

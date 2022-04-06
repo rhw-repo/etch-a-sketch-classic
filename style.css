@@ -1,0 +1,53 @@
+body {
+    margin: auto;
+    background-color:#bbcbde;
+    width: 1200px;
+    color:  #ffd700;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Qwigley', cursive;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0000;
+    border: 2px solid gray;
+    border-radius: 1%;
+    margin: 30px 0px;
+}
+
+.board {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    display: grid;
+}
+
+.buttons {
+    padding: 16px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+    border: 1px solid gray;
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+    text-align: center;
+}
+
