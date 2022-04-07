@@ -19,10 +19,11 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 700px;
     background-color: #ff0000;
     border: 2px solid gray;
     border-radius: 1%;
-    margin: 30px 0px;
+    margin: 5px 0px;
 }
 
 .board {

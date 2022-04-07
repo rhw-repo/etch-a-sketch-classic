@@ -1,0 +1,54 @@
+The Odin Project "Etch A Sketch Project"
+@ https://www.theodinproject.com/lessons/foundations-etch-a-sketch
+
+1. Define parameters from Odin Project task: 
+- scalable grid of squares constructed in JavaScript using DOM methods
+- individual grid squares change colour on mouseenter and can later have that colour erased on mouseenter
+- buttons allow user to select that colour and to then erase it
+- a clear grid button and prompt window allows user to clear grid and reset grid size by number of squares to a maximum 
+  of 100 squares within same total grid area size 
+  - Extra challenge: index.js Maths.random() to make function with mouse overevent firing onclick (from button "Rainbow" index.html) with randomised backgroundColor 
+appearing on mouseover in grid.
+  
+  [NOTE: switched prompt window  to input text field for better UX Design]
+
+2. (index.html) Make container to hold all div structure and buttons, all with class names. 
+
+4. (style.css) Centre that container with Flexbox. Style page backgroundColor, text color, buttons colors & shapes.
+
+5. (index.js) Make function fillBoard() to make scalable grid of boxes using divs (class name "square"): 
+    (CSS Grid) gridTemplateColumns, gridTemplateRows, increment in for loop to append to the HTML div 
+    className="board".  
+
+6. (style.css) Set .board CSS rule display: grid, set width, height, add border.  
+
+7. (index.js) Make a function setSize() to change the size of the grid. 
+    If input is a number between 2 and 100 call fillBoard(). Render empty error message. 
+    Else render text error message. 
+
+8. (index.html) Make an input tag with type of input as "text", label it with instruction to user (what to input). 
+
+9. (index.html) Call setSize from within the HTML input tag passing "this.value" as parameter. 
+
+10. (index.js) Make a function colourSquare() to change backgroundColor of each div with className "square":
+    addEventListener + mouseover event, Declare global variable "color" = white (to make grid appear). 
+
+11.1 (index.js) Make a function changeColour() to fire colourSquare(), code block:
+    // in a function, keyword this refers to global object and is undefined, here keyword this will refer to "square"
+   this.style.backgroundColor = color; 
+
+11.2 (index.html) Add onclick to each colour choice buttons to fire changeColour passing in the appropriate colour 
+      as a string from the HTML for the parameter. 
+    
+11.3 Contents of those strings are CSS colours. JavaScript sets style rules using those words as values of variable "color".
+    
+10. (index.js) Make a function reset() using forEach(div) to reset backgroundColor to white. 
+
+11. (index.html) Call reset() onclick from Reset button. 
+
+12. (index.js)colourSquare() add if else statement. If color === "random" then change backgroundColor to random:
+  // Maths.random () generates random numbers between 0 and 1
+  // the random number is then multiplied by 360 (maximum value of hue, first value in hue notation)
+  //followed by saturation at 60% and lightness at 70%) producing muted color pallete
+  `hsl(${Math.random() *360}, 60%, 70%)`; 
+  Else {backgroundColor = color;}
